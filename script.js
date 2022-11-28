@@ -1,22 +1,28 @@
 "use strict";
 
 const showButtons = document.querySelectorAll(".btn");
-const modalItems = document.querySelectorAll(".hidden");
+const popUp = document.querySelectorAll(".hidden");
+const overlay = document.querySelector(".overlay");
 
-document.querySelector(".btn-close").addEventListener("click", close);
-document.querySelector(".overlay").addEventListener("click", close);
+const closeButton = document.querySelector(".btn-close");
 
 for (let i = 0; i < showButtons.length; i++) {
   showButtons[i].addEventListener("click", open);
 }
 
+closeButton.addEventListener("click", close);
+overlay.addEventListener("click", close);
+
 function open() {
-  for (let j = 0; j < modalItems.length; j++) {
-    modalItems[j].style.display = "block";
+  //
+  for (let i = 0; i < popUp.length; i++) {
+    popUp[i].classList.remove("hidden");
   }
 }
 
 function close() {
-  for (let i = 0; i < modalItems.length; i++)
-    modalItems[i].style.display = "none";
+  //
+  for (let i = 0; i < popUp.length; i++) {
+    popUp[i].classList.add("hidden");
+  }
 }
