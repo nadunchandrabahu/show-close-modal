@@ -12,7 +12,7 @@ for (let i = 0; i < showButtons.length; i++) {
 
 function open() {
   for (let j = 0; j < modalItems.length; j++) {
-    modalItems[j].style.display = "";
+    modalItems[j].style.display = "block";
   }
 }
 

@@ -52,6 +52,7 @@ h1 {
   background-color: #fff;
   border-radius: 5px;
   z-index: 10;
+  box-shadow: 0 3rem 5rem rgba(255, 119, 0, 0.182);
 }
 
 .btn-close {
@@ -66,8 +67,8 @@ h1 {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
   position: absolute;
   top: 0%;
   left: 0%;
@@ -77,5 +78,5 @@ h1 {
 }
 
 .hidden {
-  display: ;
+  display: none;
 }
