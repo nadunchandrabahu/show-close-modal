@@ -20,5 +20,5 @@ closeButton.addEventListener("click", close);
 overlay.addEventListener("click", close);
 
 document.addEventListener("keydown", function (e) {
-  if (e.code === "Escape") close();
+  if (!overlay.classList.contains("hidden") && e.code === "Escape") close();
 });
