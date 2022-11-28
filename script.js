@@ -1,5 +1,13 @@
 "use strict";
 
+function open() {
+  for (let i = 0; i < popUp.length; i++) popUp[i].classList.remove("hidden");
+}
+
+function close() {
+  for (let i = 0; i < popUp.length; i++) popUp[i].classList.add("hidden");
+}
+
 const showButtons = document.querySelectorAll(".btn");
 const popUp = document.querySelectorAll(".hidden");
 const overlay = document.querySelector(".overlay");
@@ -11,10 +19,6 @@ for (let i = 0; i < showButtons.length; i++)
 closeButton.addEventListener("click", close);
 overlay.addEventListener("click", close);
 
-function open() {
-  for (let i = 0; i < popUp.length; i++) popUp[i].classList.remove("hidden");
-}
-
-function close() {
-  for (let i = 0; i < popUp.length; i++) popUp[i].classList.add("hidden");
-}
+document.addEventListener("keydown", function (e) {
+  if (e.code === "Escape") close();
+});
